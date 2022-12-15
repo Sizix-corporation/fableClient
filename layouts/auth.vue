@@ -1,6 +1,6 @@
 <template>
   <main class="bg-white dark:bg-slate-900 w-full h-full pb-24 relative">
-    <LayoutNavLanding class="hidden md:flex sm:mb-20 lg:mb-28" />
+    <OrganismsNavLanding class="hidden md:flex sm:mb-20 lg:mb-28" />
     <section
       class="mx-auto sm:max-w-3xl md:max-w-4xl lg:max-w-6xl xl:max-w-7xl 2xl:max-w-7xl bg-white dark:bg-slate-900 dark:bg-opacity-80 rounded-lg py-4 grid grid-cols-10 drop-shadow-lg"
     >
@@ -19,7 +19,7 @@
             >
               êtes vous abonné ?
             </p>
-            <Badge name="Newsletter" url="/" />
+            <AtomsBadge name="Newsletter" url="/" />
           </div>
         </div>
         <div class="sm:pl-8 lg:pl-12 relative">
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="hidden lg:block lg:col-span-3 w-full py-4 px-2">
-        <BookAnimation />
+        <OrganismsBookAnimation />
       </div>
     </section>
   </main>

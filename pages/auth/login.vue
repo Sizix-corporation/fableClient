@@ -11,7 +11,7 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Email</label
         >
-        <Input
+        <AtomsInput
           v-model="form.email"
           class="my-4"
           type="email"
@@ -23,7 +23,7 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Mot de passe</label
         >
-        <Input
+        <AtomsInput
           v-model="form.password"
           class="my-4"
           type="password"
@@ -37,13 +37,13 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Se souvenir de moi</label
         >
-        <Input
+        <AtomsInput
           type="checkbox"
           class="ml-4 w-6 h-6 rounded-md accent-indigo-800"
         />
       </div>
 
-      <BtnSubmit :pending="pendingQuery" name="Me connecter " />
+      <AtomsBtnSubmit :pending="pendingQuery" name="Me connecter " />
       <hr class="col-span-3 my-4" />
       <NuxtLink
         to="/"

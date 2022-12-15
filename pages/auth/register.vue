@@ -11,7 +11,7 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Nom</label
         >
-        <Input
+        <AtomsInput
           v-model="form.name"
           class="my-4"
           type="text"
@@ -23,7 +23,7 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Prénom</label
         >
-        <Input
+        <AtomsInput
           v-model="form.surname"
           class="my-4"
           type="text"
@@ -35,7 +35,7 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Email</label
         >
-        <Input
+        <AtomsInput
           v-model="form.email"
           class="my-4"
           type="email"
@@ -66,7 +66,7 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Mot de passe</label
         >
-        <Input
+        <AtomsInput
           v-model="form.password"
           class="my-4"
           type="password"
@@ -78,14 +78,14 @@
           class="text-gray-900 dark:text-slate-100 text-sm font-semibold tracking-wide"
           >Confirmer mot de passe</label
         >
-        <Input
+        <AtomsInput
           v-model="form.password_confirmation"
           class="my-4"
           type="password"
           placeholder="Confirmer mot de passe"
         />
       </div>
-      <BtnSubmit :pending="pendingQuery" name="M'inscrire maintenant " />
+      <AtomsBtnSubmit :pending="pendingQuery" name="M'inscrire maintenant " />
     </form>
   </NuxtLayout>
 </template>
