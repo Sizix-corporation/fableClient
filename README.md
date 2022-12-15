@@ -1,5 +1,7 @@
 # Fable interface 
 
+#Tech Stack 
+Nuxt 3 , tailwind , Typescript 
 
 ## Setup
 
