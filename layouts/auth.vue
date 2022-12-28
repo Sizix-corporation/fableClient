@@ -45,10 +45,8 @@
   </main>
 </template>
 
-<script>
-export default {
-  name: "AuthLayout",
-};
+<script setup lang='ts'>
+
 </script>
 
 <style scoped>

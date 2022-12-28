@@ -68,8 +68,8 @@ interface Form {
   password: string;
 }
 const form: Ref<Form> = ref({
-  email: "poupoinaka03@gmail.com",
-  password: "01233378",
+  email: "",
+  password: "",
 });
 const runtime = useRuntimeConfig();
 const pendingQuery: Ref<boolean> = ref(false); // observer state query
@@ -88,5 +88,6 @@ const submit = async () => {
       navigateTo("/dashboard");
     }
   });
+  
 };
 </script>

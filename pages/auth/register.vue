@@ -124,6 +124,9 @@ const submit = async () => {
     body: JSON.stringify(form.value),
   }).then((res) => {
     pendingQuery.value = res.pending.value;
+    if (res.data.value) {
+      navigateTo("/connexion")
+    }
   });
 };
 </script>

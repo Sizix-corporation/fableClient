@@ -10,28 +10,31 @@
       >
       <MoleculesSwitchMode />
     </div>
-    <MoleculesListNav :data='links'/>
-    <div
-      v-if="!guest()"
-      class="flex flex-row items-center gap-x-4 justify-center w-full"
-    >
-      <NuxtLink
-        to="/inscription"
-        class="text-base md:text-base lg:text-lg font-semibold hover:opacity-80 transition duration-500"
-        >M'inscrire</NuxtLink
+    <MoleculesListNav />
+    <ClientOnly>
+      <div
+        v-if="guest()"
+        class="flex flex-row items-center gap-x-4 justify-center w-full"
       >
-      <AtomsBtnRounded href="/connexion" name="Me connecter" />
-    </div>
-    <div
-      v-else
-      class="flex flex-row items-center gap-x-4 justify-center w-full"
-    >
-      <AtomsBtnRounded href="/dashboard" name="Mon compte"  />
-    </div>
+        <AtomsBtnRounded href="/dashboard" name="Mon compte" />
+      </div>
+      <div
+        v-else
+        class="flex flex-row items-center gap-x-4 justify-center w-full"
+      >
+        <NuxtLink
+          to="/inscription"
+          class="text-base md:text-base lg:text-lg font-semibold hover:opacity-80 transition duration-500"
+          >M'inscrire</NuxtLink
+        >
+
+        <AtomsBtnRounded href="/connexion" name="Me connecter" />
+      </div>
+    </ClientOnly>
   </nav>
 </template>
 <script lang="ts" setup>
-import guest from '@/composables/guard/guest'
+import guest from "@/composables/guard/guest";
 </script>
 <style scoped>
 h1 {

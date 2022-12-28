@@ -5,7 +5,7 @@
 <script >
 export default{
     props:{
-        href:{type:String,required:true},
+        href:{type:String,required:false ,default:'/'},
         name:{type:String,required:true},
     }
 }

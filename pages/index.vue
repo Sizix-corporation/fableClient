@@ -28,10 +28,17 @@
 
 <script lang="ts" setup>
 import { tags } from "@/utils/Tags";
+
+
 definePageMeta({
   layout: "landing",
   alias: "/",
 });
+
+
+
+
+
 </script>
 <style scoped>
 @media screen and (min-width: 768px) {

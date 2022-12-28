@@ -3,6 +3,7 @@ import type { Ref } from "vue";
 import Swal from "sweetalert2";
 export default function () {
   return useState("alertError", () => {
+    
     const initError = validationError();
     const errors = computed(() => {
       return initError.$state.all;
@@ -25,4 +26,5 @@ export default function () {
     });
     
   });
+
 }

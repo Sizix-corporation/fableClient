@@ -14,8 +14,13 @@ export const user=defineStore('user',{
         },
         login(){
            this.$state.auth=true
+        },
+        logout(){
+            this.$state.auth=false;
+            this.$state.user={}
         }
     },
     persist: true,
 })
+
 

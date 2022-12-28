@@ -1,18 +1,18 @@
 <template>
-  <main class="w-full grid grid-cols-10 gap-x-2 mx-0 p-6">
+  <main class="w-full grid grid-cols-10 gap-x-2 mx-0 p-6 h-screen dark:bg-slate-800">
     <aside
-      class="sticky top-0 h-full w-full rounded-l-2xl bg-slate-100 col-span-2 dark:bg-slate-700 bg-opacity-60 p-4"
+      class="h-3/4 w-full rounded-l-2xl bg-slate-100 col-span-2 dark:bg-slate-900 bg-opacity-60 p-4"
     >
-      <OrganismsSideBar />
+     <OrganismsSideBar  />
     </aside>
-    <div class="w-full col-span-6 bg-white dark:bg-slate-900 z-20">
-      <OrganismsNavBar />
-      <slot />
+    <div class="w-full px-2 pt-2 col-span-6 bg-white dark:bg-slate-900 z-20 h-5/6 overflow-y-auto">
+      <OrganismsNavBar class="mb-6"/>
+       <slot  />
     </div>
     <aside
-      class="sticky top-0 h-full w-full rounded-r-2xl col-span-2 bg-slate-100 dark:bg-slate-700 bg-opacity-60 p-4"
+      class=" h-3/4  w-full rounded-r-2xl bg-slate-100 col-span-2 dark:bg-slate-900 bg-opacity-60 p-4"
     >
-      <OrganismsSideBar class="" />
+      <OrganismsUserBar />
     </aside>
   </main>
 </template>

@@ -1,0 +1,9 @@
+<template>
+  <svg width="32" height="32" viewBox="0 0 32 32"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M30 12L16 24L2 12"/></svg>
+</template>
+
+<script>
+export default {
+ name:'BottomIcon'
+}
+</script>

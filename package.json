@@ -16,11 +16,15 @@
     "eslint": "^8.29.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "eslint-plugin-vue": "^9.8.0",
-    "nuxt": "^3.0.0"
+    "nuxt": "^3.0.0",
+    "nuxt-headlessui": "^1.0.4"
   },
   "dependencies": {
     "@nuxtjs/google-fonts": "^2.0.0",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@pinia/nuxt": "^0.4.6",
+    "@vueuse/core": "^9.9.0",
+    "ably": "^1.2.34",
     "sweetalert2": "^11.6.15"
   }
 }

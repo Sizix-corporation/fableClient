@@ -1,9 +1,9 @@
 <template>
-  <div class="w-full mx-auto relative h-full">
+  <div class="w-full mx-auto  h-full">
     <div class="flex items-center gap-2 w-full">
-      <h2 class="text-slate-700 font-semibold">Fable</h2>
-      <Input
-        class="bg-slate-200 border-0 w-full"
+      <h2 class="text-slate-700 dark:text-white font-semibold">Fable</h2>
+      <AtomsInput
+        class="bg-slate-300 dark:bg-slate-700 border-0 w-full "
         placeholder="Vous cherchez ? "
       />
     </div>
@@ -14,10 +14,10 @@
     >
       <AtomsLabel
         :name="data.title"
-        class="text-slate-500 font-semibold mb-4 mt-8"
+        class="text-slate-500 dark:text-white dark:text-opacity-70 font-semibold mb-4 mt-8"
       />
       <li class="w-full" v-for="(link, index) in data.links" :key="index">
-        <MoleculesNavIcon to="/" :name="link.name">
+        <MoleculesNavIcon :to="link.to" :name="link.name">
           <template #icon>
             <component :is="link.icon"></component>
           </template>
@@ -28,7 +28,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { Ref } from "vue";
 import Story from "@/components/Atoms/Icon/Story.vue";
 import Book from "@/components/Atoms/Icon/Book.vue";
 import CreateBook from "@/components/Atoms/Icon/CreateBook.vue";
@@ -39,19 +38,22 @@ interface Data {
   links: {
     name: string;
     icon: unknown;
+    to:string
   }[];
 }
-const datas: Ref<Data[]> = ref([
+const datas: Data[] = [
   {
     title: "Actualité",
     links: [
       {
         name: "Les histoires",
         icon: Story,
+        to:'/'
       },
       {
         name: "Les livre",
         icon: Book,
+        to:'/'
       },
     ],
   },
@@ -61,18 +63,21 @@ const datas: Ref<Data[]> = ref([
       {
         name: "Écrire une histoire",
         icon: CreateStory,
+        to:'/creer-une-histoire'
       },
       {
         name: "Écrire un livre",
         icon: CreateBook,
+        to:'/'
       },
       {
         name: "Au brouillon",
         icon: Later,
+        to:'/'
       },
     ],
   },
-]);
+];
 </script>
 <style scoped>
 h2,

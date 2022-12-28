@@ -20,8 +20,6 @@ export default function (url: string, options?: FetchOptions) {
       credentials: "include",
       ...options,
     });
-
-
     return response;
   };
   const res = callApi().then((res) => {
@@ -30,7 +28,6 @@ export default function (url: string, options?: FetchOptions) {
       initError.updateStatus(res.error.value?.status);
       initError.setError(res.error.value?.data);
       alertError(); // use Composable for dispatch all errors
-
     }
     return res
   });
